@@ -1,6 +1,6 @@
 {
   "name": "fh-wfm-result",
-  "version": "0.0.17",
+  "version": "0.1.0-alpha.1",
   "description": "A result module for WFM, for working with the results of pushing a workorder through a workflow",
   "main": "lib/angular/result-ng.js",
   "repository": {
