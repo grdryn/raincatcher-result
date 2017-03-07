@@ -1,6 +1,6 @@
 {
   "name": "fh-wfm-result",
-  "version": "0.0.17",
+  "version": "0.1.1",
   "description": "A result module for WFM, for working with the results of pushing a workorder through a workflow",
   "main": "lib/angular/result-ng.js",
   "repository": {
@@ -21,19 +21,26 @@
   "dependencies": {
     "angular-messages": "1.5.3",
     "express": "4.14.0",
-    "fh-wfm-sync": "0.0.16",
     "lodash": "4.7.0",
     "ng-feedhenry": "0.3.0",
+    "fh-wfm-mediator": "0.3.1",
+    "string-template": "^1.0.0",
+    "shortid": "^2.2.6",
     "q": "1.4.1"
   },
   "devDependencies": {
     "body-parser": "1.15.0",
-    "fh-wfm-mediator": "0.0.15",
-    "fh-wfm-template-build": "0.0.9",
-    "grunt": "^1.0.1",
-    "grunt-eslint": "^18.0.0",
-    "mocha": "2.4.5",
+    "chai": "^3.5.0",
+    "fh-wfm-template-build": "0.2.1",
+    "grunt": "1.0.1",
+    "grunt-eslint": "18.0.0",
+    "grunt-mocha-test": "0.13.2",
+    "load-grunt-tasks": "3.5.2",
+    "mocha": "3.2.0",
+    "nsp": "2.6.2",
     "request": "2.69.0",
-    "should": "8.3.0"
+    "should": "8.3.0",
+    "sinon": "1.17.6",
+    "sinon-as-promised": "4.0.2"
   }
 }
