@@ -1,15 +1,12 @@
 {
   "name": "fh-wfm-result",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A result module for WFM, for working with the results of pushing a workorder through a workflow",
-  "main": "lib/angular/result-ng.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/feedhenry-raincatcher/raincatcher-result.git"
   },
   "scripts": {
-    "build": "wfm-template-build -m 'wfm.result.directives'",
-    "watch": "wfm-template-build -w -m 'wfm.result.directives'",
     "test": "grunt"
   },
   "keywords": [
@@ -19,19 +16,15 @@
   "author": "Brian Leathem",
   "license": "MIT",
   "dependencies": {
-    "angular-messages": "1.5.3",
     "express": "4.14.0",
     "lodash": "4.7.0",
-    "ng-feedhenry": "0.3.0",
     "fh-wfm-mediator": "0.3.1",
-    "string-template": "^1.0.0",
     "shortid": "^2.2.6",
     "q": "1.4.1"
   },
   "devDependencies": {
     "body-parser": "1.15.0",
     "chai": "^3.5.0",
-    "fh-wfm-template-build": "0.2.1",
     "grunt": "1.0.1",
     "grunt-eslint": "18.0.0",
     "grunt-mocha-test": "0.13.2",
