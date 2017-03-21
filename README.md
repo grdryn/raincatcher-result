@@ -1,47 +1,29 @@
 # FeedHenry WFM Result
 
-A result module for WFM, for working with the results of pushing a workorder through a result.
-
-This module provides :
-- An AngularJS Service
-- An Backend Service to intialize the synchronization
-
+A result module for WFM, for working with the results of pushing a workorder through a workflow.
 
 ## Client-side usage
 
-
-#### Setup
-This module is packaged in a CommonJS format, exporting the name of the Angular namespace.  The module can be included in an angular.js as follows:
+### Setup
+This module can be initialised by 
 
 ```javascript
-angular.module('app', [
-, require('fh-wfm-result')
-...
-])
+var resultModule = require('fh-wfm-result');
+
+//Initialising the result module with a mediator. This will set up all of the subscribers for the result module.
+resultModule(mediator);
+
+//The result mediator topics are now subscribed.
+mediator.subscribe("done:wfm:results:list", function(arrayOfResults) {
+  ...
+  console.log("All Results", arrayOfResults);
+  ...
+});
+
+mediator.publish("wfm:results:list");
 ```
 
 #### Integration
-
-##### Angular service
-A sync manager must first be initialized using the `resultSync.managerPromise()`.  This can be placed, for instance, in the `resolve` config of a `ui-router` controlled application.
-
-```javascript
-resultManager: function(resultSync) {
-  return resultSync.managerPromise;
-},
-```
-For a more complete example, please check the [demo portal app](https://github.com/feedhenry-staff/wfm-portal/blob/master/src/app/workorder/workorder.js).
-
-
-##### `resultSync` API
-These resultSync API methods all return Promises:
-
-| resultSync method | Description |
-| -------------------- | ----------- |
-| `resultSync.manager.list` | list all results |
-| `resultSync.manager.create(result)` | create a result |
-| `resultSync.manager.read(resultId)` | read a result |
-| `resultSync.manager.update(result)` | update a result |
 
 ### Topic Subscriptions
 
