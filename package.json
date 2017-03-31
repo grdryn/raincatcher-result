@@ -18,10 +18,10 @@
   "dependencies": {
     "angular-messages": "1.5.3",
     "express": "4.15.2",
+    "fh-wfm-mediator": "0.3.2",
     "lodash": "4.7.0",
-    "fh-wfm-mediator": "0.3.1",
-    "shortid": "^2.2.6",
-    "q": "1.4.1"
+    "q": "1.4.1",
+    "shortid": "^2.2.6"
   },
   "devDependencies": {
     "body-parser": "1.15.0",
